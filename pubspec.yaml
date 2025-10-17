@@ -1,6 +1,6 @@
 name: password_generator
 description: A beautiful animated password generator web app built with Flutter.
-publish_to: 'none' # Remove this line if you plan to publish it on pub.dev
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -11,10 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # For animations
+    
   lottie: ^3.1.0
 
-  # Optional (for extra icons)
+
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
@@ -27,7 +27,7 @@ flutter:
 
   uses-material-design: true
 
-  # 👇 Add your local image assets here
+
   assets:
     - assets/main.jpg
     - assets/bg_card.jpg
