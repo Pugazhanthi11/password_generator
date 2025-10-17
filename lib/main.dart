@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -94,15 +92,11 @@ class _PasswordGeneratorPageState extends State<PasswordGeneratorPage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // 🌄 Background from assets
           Image.asset(
             'assets/main.jpg',
             fit: BoxFit.cover,
           ),
-          // Overlay for readability
           Container(color: Colors.black.withOpacity(0.5)),
-
-          // Main content
           Center(
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(16),
@@ -130,7 +124,6 @@ class _PasswordGeneratorPageState extends State<PasswordGeneratorPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      // 🔥 Animated header
                       Lottie.network(
                         'https://assets8.lottiefiles.com/packages/lf20_kyu7xb1v.json',
                         height: 120,
@@ -175,8 +168,6 @@ class _PasswordGeneratorPageState extends State<PasswordGeneratorPage> {
                         ),
                       ),
                       const SizedBox(height: 20),
-
-                      // Length slider
                       Text(
                         'Length: $_length',
                         style:
@@ -191,8 +182,6 @@ class _PasswordGeneratorPageState extends State<PasswordGeneratorPage> {
                         onChanged: (v) => setState(() => _length = v.round()),
                         activeColor: Colors.amber,
                       ),
-
-                      // Toggles
                       _buildSwitch('Lowercase (a-z)', _useLower,
                           (v) => setState(() => _useLower = v)),
                       _buildSwitch('Uppercase (A-Z)', _useUpper,
@@ -203,8 +192,6 @@ class _PasswordGeneratorPageState extends State<PasswordGeneratorPage> {
                           (v) => setState(() => _useSymbols = v)),
 
                       const SizedBox(height: 20),
-
-                      // Buttons
                       Row(
                         children: [
                           Expanded(
@@ -236,8 +223,6 @@ class _PasswordGeneratorPageState extends State<PasswordGeneratorPage> {
                       ),
 
                       const SizedBox(height: 20),
-
-                      // Strength indicator
                       Text(
                         'Strength: ${str['label']}',
                         style: const TextStyle(
@@ -251,8 +236,6 @@ class _PasswordGeneratorPageState extends State<PasswordGeneratorPage> {
                       ),
 
                       const SizedBox(height: 24),
-
-                      // 🎬 Footer animation
                       Lottie.network(
                         'https://assets1.lottiefiles.com/packages/lf20_u4yrau.json',
                         height: 100,
